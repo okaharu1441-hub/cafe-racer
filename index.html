@@ -6,14 +6,6 @@
   <meta name="description" content="Cafe Racerに魅せられた者たちへ。妥協なきグッズコレクション。ステッカー、キーホルダー、マグカップ。">
   <title>CAFE RACER GOODS</title>
 
-  <!-- ========================================================
-    Google Analytics 4 の設定方法:
-    1. https://analytics.google.com にアクセス（Gmailでログイン）
-    2. 「測定を開始」→ プロパティを作成
-    3. 「データストリーム」→ ウェブ → URLを入力
-    4. 「測定ID」（G-XXXXXXXXXX）をコピー
-    5. 下記コメントを外し、G-XXXXXXXXXX を実際のIDに置換
-  ======================================================== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQK16QN0TE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,20 +22,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:          #0d0d0d;
-      --bg2:         #121212;
-      --bg3:         #1a1a1a;
-      --bg4:         #222222;
-      --gold:        #c9a84c;
-      --gold-light:  #e0c068;
-      --gold-dim:    rgba(201,168,76,0.15);
-      --text:        #e4ddd0;
-      --text-muted:  #807870;
-      --border:      #252525;
+      --bg:         #0d0d0d;
+      --bg2:        #121212;
+      --bg3:        #1a1a1a;
+      --bg4:        #222222;
+      --gold:       #c9a84c;
+      --gold-light: #e0c068;
+      --gold-dim:   rgba(201,168,76,0.15);
+      --text:       #e4ddd0;
+      --text-muted: #807870;
+      --border:     #252525;
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       background-color: var(--bg);
       color: var(--text);
@@ -52,8 +43,6 @@
       line-height: 1.8;
       overflow-x: hidden;
     }
-
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); }
@@ -71,9 +60,7 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--gold-dim);
-      transition: padding 0.3s;
     }
-
     .logo {
       font-family: 'Oswald', sans-serif;
       font-size: 1.05rem;
@@ -81,17 +68,9 @@
       letter-spacing: 0.35em;
       color: var(--gold);
       text-decoration: none;
-      text-transform: uppercase;
     }
     .logo span { color: var(--text); font-weight: 200; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a {
       font-family: 'Oswald', sans-serif;
       font-size: 0.7rem;
@@ -102,7 +81,6 @@
       transition: color 0.3s;
     }
     .nav-links a:hover { color: var(--gold); }
-
     .header-cta {
       font-family: 'Oswald', sans-serif;
       font-size: 0.7rem;
@@ -128,16 +106,13 @@
       overflow: hidden;
       padding: 7rem 2rem 5rem;
     }
-
     .hero-grid {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background-image:
         linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
       background-size: 64px 64px;
     }
-
     .hero-glow {
       position: absolute;
       top: 50%; left: 50%;
@@ -146,9 +121,7 @@
       background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
       pointer-events: none;
     }
-
     .hero-content { position: relative; z-index: 1; }
-
     .hero-eyebrow {
       font-family: 'Oswald', sans-serif;
       font-size: 0.65rem;
@@ -158,7 +131,6 @@
       text-transform: uppercase;
       margin-bottom: 1.8rem;
     }
-
     .hero-title {
       font-family: 'Oswald', sans-serif;
       font-size: clamp(3.5rem, 11vw, 8rem);
@@ -166,9 +138,7 @@
       line-height: 0.88;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      margin-bottom: 0;
     }
-
     .hero-title .italic-line {
       display: block;
       font-family: 'Playfair Display', serif;
@@ -179,14 +149,11 @@
       color: var(--gold);
       margin: 0.15em 0;
     }
-
     .hero-divider {
-      width: 1px;
-      height: 48px;
+      width: 1px; height: 48px;
       background: linear-gradient(to bottom, transparent, var(--gold), transparent);
       margin: 2rem auto;
     }
-
     .hero-subtitle {
       font-size: 0.92rem;
       color: var(--text-muted);
@@ -194,7 +161,6 @@
       margin: 0 auto 2.5rem;
       line-height: 2;
     }
-
     .btn-primary {
       display: inline-block;
       font-family: 'Oswald', sans-serif;
@@ -210,7 +176,6 @@
       transition: background 0.3s;
     }
     .btn-primary:hover { background: var(--gold-light); }
-
     .btn-primary .shine {
       position: absolute;
       top: 0; left: -100%;
@@ -222,13 +187,9 @@
 
     .scroll-indicator {
       position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
+      bottom: 2.5rem; left: 50%;
       transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
+      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
       z-index: 1;
     }
     .scroll-indicator span {
@@ -239,8 +200,7 @@
       text-transform: uppercase;
     }
     .scroll-line {
-      width: 1px;
-      height: 44px;
+      width: 1px; height: 44px;
       background: linear-gradient(to bottom, var(--gold), transparent);
       animation: pulse-line 2s ease-in-out infinite;
     }
@@ -249,10 +209,9 @@
       50%       { opacity: 1;   transform: scaleY(1); }
     }
 
-    /* ── SECTION COMMON ── */
+    /* ── COMMON ── */
     section { padding: 5.5rem 2rem; }
     .container { max-width: 1080px; margin: 0 auto; }
-
     .section-label {
       font-family: 'Oswald', sans-serif;
       font-size: 0.6rem;
@@ -275,58 +234,23 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-body { margin-top: 1.8rem; }
+    .about-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 2; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .stat { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.12em; margin-top: 0.35rem; }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-body {
-      margin-top: 1.8rem;
-    }
-    .about-body p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-      line-height: 2;
-    }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .stat {
-      border-left: 2px solid var(--gold);
-      padding-left: 1.2rem;
-    }
-    .stat-num {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 600;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.68rem;
-      color: var(--text-muted);
-      letter-spacing: 0.12em;
-      margin-top: 0.35rem;
-    }
-
-    /* ── PRODUCTS ── */
+    /* ── PRODUCTS: CATEGORY CARDS ── */
     .products-intro {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     .btn-outline {
       font-family: 'Oswald', sans-serif;
       font-size: 0.7rem;
@@ -340,26 +264,71 @@
     }
     .btn-outline:hover { border-color: var(--gold); background: var(--gold-dim); }
 
-    .products-grid {
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
     }
 
-    .product-card {
-      background: var(--bg3);
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      transition: background 0.3s;
+    .category-card {
       position: relative;
+      cursor: pointer;
       overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--bg3);
     }
-    .product-card:hover { background: var(--bg4); }
 
-    .product-card::after {
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .category-card:hover img { transform: scale(1.05); }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+      transition: background 0.3s;
+    }
+    .category-card:hover .category-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
+    }
+
+    .category-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.8rem 1.5rem;
+      z-index: 1;
+    }
+    .category-en {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .category-ja {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #fff;
+    }
+    .category-hint {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+    .category-card:hover .category-hint { color: var(--gold); }
+
+    /* top-right gold line animation */
+    .category-card::after {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
@@ -369,96 +338,148 @@
       transform-origin: left;
       transition: transform 0.4s ease;
     }
-    .product-card:hover::after { transform: scaleX(1); }
+    .category-card:hover::after { transform: scaleX(1); }
 
-    .product-thumb {
-      width: 100%;
-      aspect-ratio: 1;
-      background: var(--bg2);
+    /* ── MODAL ── */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 200;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
       position: relative;
-      overflow: hidden;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+    .modal-backdrop.open .modal-box { transform: none; }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.5rem;
       border-bottom: 1px solid var(--border);
     }
-
-    /* Actual product image — replace src="" below with the Suzuri image URL */
-    .product-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Shown when image is absent / errors */
-    .product-thumb .placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
-      color: var(--text-muted);
-    }
-    .product-thumb .placeholder svg { opacity: 0.25; }
-    .product-thumb .placeholder span {
+    .modal-title-en {
       font-family: 'Oswald', sans-serif;
       font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-    }
-
-    /* subtle grid on placeholder */
-    .product-thumb::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
-      background-size: 24px 24px;
-      pointer-events: none;
-    }
-
-    .product-info { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
-
-    .product-category {
-      font-family: 'Oswald', sans-serif;
-      font-size: 0.58rem;
-      letter-spacing: 0.38em;
+      letter-spacing: 0.45em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 0.4rem;
     }
-
-    .product-name {
+    .modal-title-ja {
       font-family: 'Oswald', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-top: 0.1rem;
     }
-
-    .product-desc {
-      font-size: 0.8rem;
+    .modal-close {
+      background: none;
+      border: 1px solid var(--border);
       color: var(--text-muted);
-      line-height: 1.8;
-      flex: 1;
-    }
-
-    .product-cta {
+      font-size: 1.1rem;
+      width: 36px; height: 36px;
+      cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.2rem;
-      font-family: 'Oswald', sans-serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-      text-transform: uppercase;
-      transition: gap 0.3s;
+      justify-content: center;
+      transition: border-color 0.3s, color 0.3s;
+      flex-shrink: 0;
     }
-    .product-card:hover .product-cta { gap: 0.9rem; }
-    .product-cta::after { content: '→'; }
+    .modal-close:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Products inside modal */
+    .modal-products {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .modal-product-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+    }
+    .modal-product-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
+    .modal-product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .modal-product-card:hover::before { transform: scaleX(1); }
+
+    .modal-product-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      background: var(--bg2);
+    }
+    .modal-product-info { padding: 1.2rem; }
+    .modal-product-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+    .modal-product-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .modal-product-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .modal-product-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .modal-product-card:hover .modal-product-cta { gap: 0.8rem; }
+    .modal-product-cta::after { content: '→'; transition: transform 0.3s; }
 
     /* ── CTA BAND ── */
     .cta-band {
@@ -480,19 +501,11 @@
     }
     .cta-inner { position: relative; z-index: 1; }
     .cta-inner .section-title { margin: 0.6rem 0 1rem; }
-    .cta-inner p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      max-width: 380px;
-      margin: 0 auto 2.5rem;
-    }
+    .cta-inner p { font-size: 0.88rem; color: var(--text-muted); max-width: 380px; margin: 0 auto 2.5rem; }
     .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 2.5rem;
-    }
+    footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; }
     .footer-inner {
       max-width: 1080px;
       margin: 0 auto;
@@ -502,18 +515,8 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .footer-logo {
-      font-family: 'Oswald', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-    }
-    .footer-copy {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-    }
+    .footer-logo { font-family: 'Oswald', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.35em; color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; }
     .footer-link {
       font-family: 'Oswald', sans-serif;
       font-size: 0.68rem;
@@ -525,32 +528,31 @@
     }
     .footer-link:hover { color: var(--gold); }
 
-    /* ── FADE-IN ── */
+    /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
       transform: translateY(22px);
       transition: opacity 0.75s ease, transform 0.75s ease;
     }
     .fade-in.visible { opacity: 1; transform: none; }
-    .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in:nth-child(3) { transition-delay: 0.2s; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       header { padding: 1rem 1.2rem; }
       .nav-links { display: none; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .category-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
-      .products-grid { grid-template-columns: 1fr; }
       .cta-btns { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 480px) {
+      .modal-products { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     HEADER
-══════════════════════════════════════ -->
+<!-- ══ HEADER ══ -->
 <header>
   <a href="#" class="logo">Cafe<span> Racer</span></a>
   <ul class="nav-links">
@@ -560,19 +562,14 @@
   <a href="https://suzuri.jp/bandai_nameko/products"
      class="header-cta"
      onclick="trackClick('header-shop')"
-     target="_blank" rel="noopener">
-    Shop
-  </a>
+     target="_blank" rel="noopener">Shop</a>
 </header>
 
 
-<!-- ══════════════════════════════════════
-     HERO
-══════════════════════════════════════ -->
+<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-
   <div class="hero-content">
     <p class="hero-eyebrow">Handcrafted for those who ride</p>
     <h1 class="hero-title">
@@ -585,15 +582,11 @@
       速さと美学を追い求める者たちへ。<br>
       カフェレーサーのスピリットを纏ったプロダクト。
     </p>
-    <a href="https://suzuri.jp/bandai_nameko/products"
-       class="btn-primary"
-       onclick="trackClick('hero-cta')"
-       target="_blank" rel="noopener">
+    <a href="#products" class="btn-primary">
       <span class="shine"></span>
       コレクションを見る
     </a>
   </div>
-
   <div class="scroll-indicator">
     <span>Scroll</span>
     <div class="scroll-line"></div>
@@ -601,13 +594,10 @@
 </section>
 
 
-<!-- ══════════════════════════════════════
-     ABOUT
-══════════════════════════════════════ -->
+<!-- ══ ABOUT ══ -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
-
       <div class="fade-in">
         <p class="section-label">Philosophy</p>
         <h2 class="section-title">走る者の<br>美学と哲学</h2>
@@ -617,160 +607,114 @@
           <p>このグッズコレクションは、そのスピリットをプロダクトとして昇華させたもの。ライダーでなくとも、その美学に共鳴する全ての人へ。</p>
         </div>
       </div>
-
       <div class="about-stats fade-in">
-        <div class="stat">
-          <div class="stat-num">1950s</div>
-          <div class="stat-label">Born in London</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">MPH Spirit</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">0</div>
-          <div class="stat-label">Compromise</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">Road Ahead</div>
-        </div>
+        <div class="stat"><div class="stat-num">1950s</div><div class="stat-label">Born in London</div></div>
+        <div class="stat"><div class="stat-num">100+</div><div class="stat-label">MPH Spirit</div></div>
+        <div class="stat"><div class="stat-num">0</div><div class="stat-label">Compromise</div></div>
+        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Road Ahead</div></div>
       </div>
-
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     PRODUCTS
-     商品の追加・編集方法:
-       - href="..." → Suzuriの個別商品URL
-       - <img src="..."> → Suzuriの商品画像URL
-         (Suzuriの商品ページで画像を右クリック→「画像アドレスをコピー」)
-       - カードを丸ごとコピーして商品を増やせます
-══════════════════════════════════════ -->
+<!-- ══ PRODUCTS ══ -->
 <section id="products">
   <div class="container">
-
     <div class="products-intro">
       <div>
         <p class="section-label fade-in">Collection</p>
-        <h2 class="section-title fade-in">Featured<br>Products</h2>
+        <h2 class="section-title fade-in">カテゴリを<br>選んでください</h2>
       </div>
       <a href="https://suzuri.jp/bandai_nameko/products"
          class="btn-outline fade-in"
          onclick="trackClick('all-products')"
-         target="_blank" rel="noopener">
-        全商品を見る
-      </a>
+         target="_blank" rel="noopener">全商品を見る</a>
     </div>
 
-    <div class="products-grid">
+    <div class="category-grid">
 
-      <!-- ── 商品カード 1: ステッカー ── -->
-      <a href="https://suzuri.jp/bandai_nameko/products"
-         class="product-card fade-in"
-         onclick="trackClick('product-sticker')"
-         target="_blank" rel="noopener">
-        <div class="product-thumb">
-          <!-- 画像がある場合: <img src="Suzuriの画像URL" alt="Cafe Racer Sticker" loading="lazy"> -->
-          <div class="placeholder">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-            </svg>
-            <span>Sticker</span>
-          </div>
+      <!-- ステッカー -->
+      <div class="category-card fade-in" onclick="openCategory('sticker')" role="button" tabindex="0" aria-label="ステッカーを見る">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+             alt="Cafe Racer ステッカー" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-info">
+          <p class="category-en">Sticker</p>
+          <h3 class="category-ja">ステッカー</h3>
+          <p class="category-hint">タップして商品を見る →</p>
         </div>
-        <div class="product-info">
-          <p class="product-category">Sticker</p>
-          <h3 class="product-name">Cafe Racer Sticker</h3>
-          <p class="product-desc">ヘルメット、タンク、ラップトップに。カフェレーサーの魂を刻む、こだわりのステッカー。</p>
-          <span class="product-cta">Suzuriで見る</span>
-        </div>
-      </a>
+      </div>
 
-      <!-- ── 商品カード 2: キーホルダー ── -->
-      <a href="https://suzuri.jp/bandai_nameko/products"
-         class="product-card fade-in"
-         onclick="trackClick('product-keychain')"
-         target="_blank" rel="noopener">
-        <div class="product-thumb">
-          <!-- 画像がある場合: <img src="Suzuriの画像URL" alt="Key Holder" loading="lazy"> -->
-          <div class="placeholder">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
-              <circle cx="12" cy="8" r="6"/><path d="M12 14v8M9 19h6"/>
-            </svg>
-            <span>Key Holder</span>
-          </div>
+      <!-- マグカップ -->
+      <div class="category-card fade-in" onclick="openCategory('mug')" role="button" tabindex="0" aria-label="マグカップを見る">
+        <img src="https://lens.suzuri.jp/1024x1024/mug/m/white/hold/1/1395816591-4000x4000.png.webp?h=47de4a9e3c7c98d04511e27276d34a640dbe0a47&printed=true"
+             alt="Cafe Racer マグカップ" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-info">
+          <p class="category-en">Mug</p>
+          <h3 class="category-ja">マグカップ</h3>
+          <p class="category-hint">タップして商品を見る →</p>
         </div>
-        <div class="product-info">
-          <p class="product-category">Keychain</p>
-          <h3 class="product-name">Racer Key Holder</h3>
-          <p class="product-desc">毎日手にするものだから、質にこだわる。ガレージでもデスクでも存在感を放つキーホルダー。</p>
-          <span class="product-cta">Suzuriで見る</span>
-        </div>
-      </a>
+      </div>
 
-      <!-- ── 商品カード 3: マグカップ ── -->
-      <a href="https://suzuri.jp/bandai_nameko/products"
-         class="product-card fade-in"
-         onclick="trackClick('product-mug')"
-         target="_blank" rel="noopener">
-        <div class="product-thumb">
-          <!-- 画像がある場合: <img src="Suzuriの画像URL" alt="Mug" loading="lazy"> -->
-          <div class="placeholder">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
-              <path d="M17 8h1a4 4 0 010 8h-1"/><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"/>
-            </svg>
-            <span>Mug</span>
-          </div>
+      <!-- キーホルダー -->
+      <div class="category-card fade-in" onclick="openCategory('keychain')" role="button" tabindex="0" aria-label="キーホルダーを見る">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/front/19844248/1777524980-587x587.png.webp"
+             alt="Cafe Racer アクリルキーホルダー" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-info">
+          <p class="category-en">Key Holder</p>
+          <h3 class="category-ja">キーホルダー</h3>
+          <p class="category-hint">タップして商品を見る →</p>
         </div>
-        <div class="product-info">
-          <p class="product-category">Mug</p>
-          <h3 class="product-name">Cafe Racer Mug</h3>
-          <p class="product-desc">走り出す前の一杯を、このマグカップで。ガレージでも、デスクでも。朝の儀式に。</p>
-          <span class="product-cta">Suzuriで見る</span>
-        </div>
-      </a>
+      </div>
 
-    </div><!-- /products-grid -->
+    </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     CTA BAND
-══════════════════════════════════════ -->
+<!-- ══ MODAL ══ -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" onclick="closeOnBackdrop(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <p class="modal-title-en" id="modal-en"></p>
+        <p class="modal-title-ja" id="modal-ja"></p>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="閉じる">✕</button>
+    </div>
+    <div class="modal-products" id="modal-products"></div>
+  </div>
+</div>
+
+
+<!-- ══ CTA ══ -->
 <section class="cta-band">
   <div class="container">
     <div class="cta-inner">
       <p class="section-label">Suzuri Store</p>
       <h2 class="section-title">全アイテムは<br>Suzuriで</h2>
-      <p>コレクション全品を公式ストアでご覧いただけます。プリントオンデマンドだから、注文してから作られる一品。</p>
+      <p>コレクション全品を公式ストアでご覧いただけます。</p>
       <div class="cta-btns">
         <a href="https://suzuri.jp/bandai_nameko/products"
            class="btn-primary"
            onclick="trackClick('cta-primary')"
            target="_blank" rel="noopener">
-          <span class="shine"></span>
-          ストアへ進む
+          <span class="shine"></span>ストアへ進む
         </a>
         <a href="https://suzuri.jp/bandai_nameko/products"
            class="btn-outline"
            onclick="trackClick('cta-outline')"
-           target="_blank" rel="noopener">
-          全商品を見る
-        </a>
+           target="_blank" rel="noopener">全商品を見る</a>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Cafe Racer</div>
@@ -778,18 +722,98 @@
     <a href="https://suzuri.jp/bandai_nameko/products"
        class="footer-link"
        onclick="trackClick('footer-link')"
-       target="_blank" rel="noopener">
-      Suzuri Store →
-    </a>
+       target="_blank" rel="noopener">Suzuri Store →</a>
   </div>
 </footer>
 
 
-<!-- ══════════════════════════════════════
-     JS: クリックトラッキング & アニメーション
-══════════════════════════════════════ -->
 <script>
-  // GA4 イベント送信（GA4 未設定時は何もしない）
+  // ── 商品データ ──────────────────────────────────────────
+  // 商品を追加する場合は products 配列に追加するだけでOK
+  const CATEGORIES = {
+    sticker: {
+      en: 'Sticker',
+      ja: 'ステッカー',
+      products: [
+        {
+          name: 'cafe racer ステッカー',
+          price: '¥512',
+          desc: 'ヘルメット、タンク、ラップトップに。カフェレーサーの魂を刻む、こだわりのステッカー。',
+          image: 'https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true',
+          url: 'https://suzuri.jp/bandai_nameko/19844248/sticker/m/white'
+        }
+      ]
+    },
+    mug: {
+      en: 'Mug',
+      ja: 'マグカップ',
+      products: [
+        {
+          name: 'cafe racer マグカップ',
+          price: '¥2,024',
+          desc: '走り出す前の一杯を、このマグカップで。ガレージでも、デスクでも。朝の儀式に。',
+          image: 'https://lens.suzuri.jp/1024x1024/mug/m/white/hold/1/1395816591-4000x4000.png.webp?h=47de4a9e3c7c98d04511e27276d34a640dbe0a47&printed=true',
+          url: 'https://suzuri.jp/bandai_nameko/19844291/mug/m/white'
+        }
+      ]
+    },
+    keychain: {
+      en: 'Key Holder',
+      ja: 'アクリルキーホルダー',
+      products: [
+        {
+          name: 'cafe racer アクリルキーホルダー',
+          price: '¥1,109〜',
+          desc: '毎日手にするものだから、質にこだわる。ガレージでも存在感を放つアクリルキーホルダー。',
+          image: 'https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/front/19844248/1777524980-587x587.png.webp',
+          url: 'https://suzuri.jp/bandai_nameko/19844248/acrylic-keychain/50x50mm/clear'
+        }
+      ]
+    }
+  };
+
+  // ── モーダル開閉 ──────────────────────────────────────
+  function openCategory(key) {
+    const cat = CATEGORIES[key];
+    document.getElementById('modal-en').textContent = cat.en;
+    document.getElementById('modal-ja').textContent = cat.ja;
+
+    const container = document.getElementById('modal-products');
+    container.innerHTML = cat.products.map(p => `
+      <a href="${p.url}" class="modal-product-card"
+         onclick="trackClick('modal-${key}')"
+         target="_blank" rel="noopener">
+        <img class="modal-product-img" src="${p.image}" alt="${p.name}" loading="lazy">
+        <div class="modal-product-info">
+          <p class="modal-product-name">${p.name}</p>
+          <p class="modal-product-price">${p.price}</p>
+          <p class="modal-product-desc">${p.desc}</p>
+          <span class="modal-product-cta">Suzuriで購入</span>
+        </div>
+      </a>
+    `).join('');
+
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeOnBackdrop(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // キーボード操作対応
+  document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') card.click(); });
+  });
+
+  // ── GA4 クリックトラッキング ──────────────────────────
   function trackClick(label) {
     if (typeof gtag === 'undefined') return;
     gtag('event', 'outbound_click', {
@@ -799,7 +823,7 @@
     });
   }
 
-  // フェードイン (Intersection Observer)
+  // ── フェードイン ──────────────────────────────────────
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
