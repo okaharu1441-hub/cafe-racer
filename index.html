@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cafe Racerに魅せられた者たちへ。妥協なきグッズコレクション。ステッカー、キーホルダー、マグカップ。">
-  <title>CAFE RACER GOODS</title>
+  <meta name="description" content="コーヒーとバイクを愛するすべての人へ。カフェレーサースピリットを纏ったオリジナルグッズ。">
+  <title>CAFE RACER GOODS — Coffee &amp; Bikes</title>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQK16QN0TE"></script>
   <script>
@@ -16,537 +16,841 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:         #0d0d0d;
-      --bg2:        #121212;
-      --bg3:        #1a1a1a;
-      --bg4:        #222222;
+      --cream:      #f0ebe0;
+      --cream2:     #e8dfd0;
+      --cream3:     #ddd4bf;
+      --dark:       #1c1208;
+      --brown:      #3a2410;
+      --brown2:     #2d1c0a;
       --gold:       #c9a84c;
-      --gold-light: #e0c068;
-      --gold-dim:   rgba(201,168,76,0.15);
-      --text:       #e4ddd0;
-      --text-muted: #807870;
-      --border:     #252525;
+      --gold2:      #e0c068;
+      --red:        #a82818;
+      --red2:       #c03028;
+      --text:       #3a2410;
+      --text-muted: #7a5f4a;
     }
 
     html { scroll-behavior: smooth; }
     body {
-      background-color: var(--bg);
+      background: var(--cream);
       color: var(--text);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Noto Serif JP', serif;
       font-weight: 300;
       line-height: 1.8;
       overflow-x: hidden;
     }
     ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--gold-dim); }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); }
 
     /* ── HEADER ── */
     header {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1.1rem 2.5rem;
+      z-index: 200;
+      background: var(--dark);
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: rgba(13,13,13,0.88);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--gold-dim);
+      justify-content: space-between;
+      padding: 0.7rem 1.5rem;
+      height: 56px;
     }
-    .logo {
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+    }
+    .header-badge {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--cream3);
+    }
+    .header-name {
       font-family: 'Oswald', sans-serif;
-      font-size: 1.05rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-decoration: none;
-    }
-    .logo span { color: var(--text); font-weight: 200; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: 'Oswald', sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      color: var(--text-muted);
-      text-decoration: none;
+      letter-spacing: 0.2em;
+      color: #fff;
       text-transform: uppercase;
-      transition: color 0.3s;
     }
-    .nav-links a:hover { color: var(--gold); }
-    .header-cta {
+    .header-shop {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-      text-decoration: none;
-      border: 1px solid var(--gold);
-      padding: 0.45rem 1.3rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      transition: background 0.3s, color 0.3s;
+      color: #fff;
+      background: var(--red);
+      padding: 0.5rem 1.3rem;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .header-cta:hover { background: var(--gold); color: var(--bg); }
+    .header-shop:hover { background: var(--red2); }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--dark);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0.55rem 0;
+      margin-top: 56px;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .ticker-track {
+      display: inline-flex;
+      animation: ticker-scroll 25s linear infinite;
+    }
+    .ticker-item {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      padding: 0 2rem;
+    }
+    .ticker-item .diamond { color: var(--gold); margin: 0 0.5rem; }
+    @keyframes ticker-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
 
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
+      background: linear-gradient(180deg, #c4aa7a 0%, #d4c49e 30%, #e8dfd0 70%, var(--cream) 100%);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 4rem 2rem 5rem;
       position: relative;
-      overflow: hidden;
-      padding: 7rem 2rem 5rem;
     }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
-      background-size: 64px 64px;
-    }
-    .hero-glow {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .hero-content { position: relative; z-index: 1; }
     .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .hero-eyebrow-line {
+      width: 60px; height: 1px;
+      background: var(--gold);
+    }
+    .hero-eyebrow-text {
       font-family: 'Oswald', sans-serif;
       font-size: 0.65rem;
-      font-weight: 300;
-      letter-spacing: 0.6em;
+      font-weight: 400;
+      letter-spacing: 0.45em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 1.8rem;
+    }
+    .hero-badge {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
     }
     .hero-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(3.5rem, 11vw, 8rem);
-      font-weight: 700;
-      line-height: 0.88;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 0.5rem;
     }
-    .hero-title .italic-line {
+    .hero-title .line1 {
       display: block;
       font-family: 'Playfair Display', serif;
-      font-weight: 400;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      letter-spacing: 0.02em;
+    }
+    .hero-title .line2 {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 11vw, 7.5rem);
+      font-weight: 700;
       font-style: italic;
-      font-size: 0.52em;
-      letter-spacing: 0.12em;
       color: var(--gold);
-      margin: 0.15em 0;
+      letter-spacing: 0.02em;
     }
     .hero-divider {
-      width: 1px; height: 48px;
-      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-      margin: 2rem auto;
+      width: 1px; height: 60px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+      margin: 1.5rem auto;
     }
     .hero-subtitle {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      max-width: 420px;
+      font-size: 0.88rem;
+      color: rgba(50,30,10,0.75);
+      max-width: 400px;
       margin: 0 auto 2.5rem;
-      line-height: 2;
+      line-height: 2.1;
     }
-    .btn-primary {
-      display: inline-block;
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-red {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.35em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--bg);
-      background: var(--gold);
-      padding: 1rem 2.8rem;
+      color: #fff;
+      background: var(--red);
+      padding: 0.9rem 2.2rem;
       text-decoration: none;
-      position: relative;
-      overflow: hidden;
       transition: background 0.3s;
+      border: 2px solid var(--red);
     }
-    .btn-primary:hover { background: var(--gold-light); }
-    .btn-primary .shine {
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-      transition: left 0.5s;
-    }
-    .btn-primary:hover .shine { left: 100%; }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem; left: 50%;
-      transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
-      z-index: 1;
-    }
-    .scroll-indicator span {
+    .btn-red:hover { background: var(--red2); border-color: var(--red2); }
+    .btn-outline-dark {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.58rem;
-      letter-spacing: 0.4em;
-      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
+      color: var(--text);
+      background: transparent;
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      border: 2px solid rgba(58,36,16,0.35);
+      transition: border-color 0.3s;
     }
-    .scroll-line {
-      width: 1px; height: 44px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      animation: pulse-line 2s ease-in-out infinite;
-    }
-    @keyframes pulse-line {
-      0%, 100% { opacity: 0.2; transform: scaleY(0.6); }
-      50%       { opacity: 1;   transform: scaleY(1); }
+    .btn-outline-dark:hover { border-color: var(--text); }
+    .hero-bottom-line {
+      position: absolute;
+      bottom: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
-    /* ── COMMON ── */
-    section { padding: 5.5rem 2rem; }
-    .container { max-width: 1080px; margin: 0 auto; }
-    .section-label {
+    /* ── PHILOSOPHY ── */
+    .philosophy {
+      background: var(--brown2);
+      padding: 5rem 2rem;
+    }
+    .philosophy-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .philosophy-photos {
+      position: relative;
+    }
+    .philosophy-photo-main {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+      /* ↓ バイクの写真をここに設定 (motorcycle-photo.jpg など) */
+      background: linear-gradient(135deg, #1a1008 0%, #2d1d0a 100%);
+      filter: grayscale(100%) contrast(1.1);
+    }
+    .philosophy-photo-sub {
+      position: absolute;
+      bottom: -1.5rem; right: -1.5rem;
+      width: 55%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: linear-gradient(135deg, #120c06 0%, #261508 100%);
+      filter: grayscale(100%) contrast(1.1);
+      border: 4px solid var(--brown2);
+    }
+    .philosophy-badge-overlay {
+      position: absolute;
+      top: -1rem; left: -1rem;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: var(--cream);
+      z-index: 2;
+      border: 3px solid var(--cream);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .philosophy-text {
+      padding-top: 1rem;
+    }
+    .philosophy-label {
       font-family: 'Oswald', sans-serif;
       font-size: 0.6rem;
       letter-spacing: 0.55em;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.2rem;
     }
-    .section-title {
+    .philosophy-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .philosophy-body p {
+      font-size: 0.88rem;
+      color: rgba(240,235,224,0.75);
+      line-height: 2.1;
+      margin-bottom: 1rem;
+    }
+    .philosophy-quote {
+      border-left: 3px solid var(--gold);
+      padding: 0.8rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .philosophy-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: rgba(240,235,224,0.9);
+      line-height: 1.8;
+      margin: 0;
+    }
+    .philosophy-quote-attr {
       font-family: 'Oswald', sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 0.8rem;
+    }
+    .philosophy-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid rgba(201,168,76,0.25);
+      margin-top: 2rem;
+    }
+    .philosophy-stat {
+      padding: 1.2rem 1.5rem;
+      border-right: 1px solid rgba(201,168,76,0.25);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+    .philosophy-stat:nth-child(2n) { border-right: none; }
+    .philosophy-stat:nth-child(3),
+    .philosophy-stat:nth-child(4) { border-bottom: none; }
+    .philosophy-stat-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
-      line-height: 1.1;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .philosophy-stat-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: rgba(240,235,224,0.45);
+      text-transform: uppercase;
+      margin-top: 0.3rem;
     }
 
-    /* ── ABOUT ── */
-    .about {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    /* ── FEATURES ── */
+    .features {
+      background: var(--cream2);
+      border-top: 1px solid var(--cream3);
+      border-bottom: 1px solid var(--cream3);
     }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-body { margin-top: 1.8rem; }
-    .about-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 2; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .stat { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
-    .stat-num { font-family: 'Oswald', sans-serif; font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; }
-    .stat-label { font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.12em; margin-top: 0.35rem; }
+    .features-grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .feature-item {
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      border-right: 1px solid var(--cream3);
+      border-bottom: 1px solid var(--cream3);
+    }
+    .feature-item:nth-child(2n) { border-right: none; }
+    .feature-item:nth-child(3),
+    .feature-item:nth-child(4) { border-bottom: none; }
+    .feature-icon {
+      width: 44px; height: 44px;
+      background: var(--brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-icon svg { fill: var(--gold); width: 22px; height: 22px; }
+    .feature-content {}
+    .feature-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--brown);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+    }
 
-    /* ── PRODUCTS: CATEGORY CARDS ── */
-    .products-intro {
+    /* ── COLLECTION ── */
+    .collection {
+      padding: 5rem 2rem;
+      background: var(--cream);
+    }
+    .collection-header {
+      max-width: 1080px;
+      margin: 0 auto 0;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 2.5rem;
       flex-wrap: wrap;
       gap: 1rem;
+      margin-bottom: 2rem;
     }
-    .btn-outline {
+    .collection-label {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
+      font-size: 0.6rem;
+      letter-spacing: 0.55em;
       color: var(--gold);
-      border: 1px solid var(--gold-dim);
-      padding: 0.6rem 1.4rem;
-      text-decoration: none;
-      transition: border-color 0.3s, background 0.3s;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
-    .btn-outline:hover { border-color: var(--gold); background: var(--gold-dim); }
+    .collection-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+    .collection-title .dark-line { color: var(--brown); }
+    .collection-title .red-line  { color: var(--red); font-style: italic; }
+    .collection-all-link {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.3s;
+    }
+    .collection-all-link:hover { color: var(--red); }
 
-    .category-grid {
+    /* Filter tabs */
+    .collection-tabs {
+      max-width: 1080px;
+      margin: 0 auto 2.5rem;
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--cream3);
+    }
+    .tab-btn {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      padding: 0.8rem 1.5rem 0.8rem 0;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 100%; height: 2px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .tab-btn.active { color: var(--text); }
+    .tab-btn.active::after { transform: scaleX(1); }
+    .tab-btn:hover { color: var(--text); }
+
+    /* Product cards */
+    .collection-grid {
+      max-width: 1080px;
+      margin: 0 auto 3rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
+      gap: 1.5rem;
     }
-
-    .category-card {
+    .product-card {
+      background: var(--cream2);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
       position: relative;
-      cursor: pointer;
-      overflow: hidden;
-      aspect-ratio: 1;
-      background: var(--bg3);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .category-card img {
+    .product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(58,36,16,0.12); }
+    .product-badge {
+      position: absolute;
+      top: 0.7rem; left: 0.7rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--red);
+      padding: 0.25rem 0.6rem;
+      z-index: 1;
+    }
+    .product-badge.new { background: var(--brown); }
+    .product-img-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--cream3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s;
     }
-    .category-card:hover img { transform: scale(1.05); }
-
-    .category-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
-      transition: background 0.3s;
+    .product-card:hover .product-img-wrap img { transform: scale(1.04); }
+    .product-info {
+      padding: 1.2rem 1.2rem 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--cream3);
     }
-    .category-card:hover .category-overlay {
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
-    }
-
-    .category-info {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 1.8rem 1.5rem;
-      z-index: 1;
-    }
-    .category-en {
+    .product-type {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.4em;
-      color: var(--gold);
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      color: var(--text-muted);
       text-transform: uppercase;
       margin-bottom: 0.3rem;
     }
-    .category-ja {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.4rem;
+    .product-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.95rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
-      color: #fff;
+      color: var(--brown);
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
     }
-    .category-hint {
-      font-size: 0.68rem;
-      color: rgba(255,255,255,0.45);
-      margin-top: 0.4rem;
-      letter-spacing: 0.05em;
-      transition: color 0.3s;
+    .product-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      flex: 1;
+      margin-bottom: 1rem;
     }
-    .category-card:hover .category-hint { color: var(--gold); }
-
-    /* top-right gold line animation */
-    .category-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--cream3);
+      padding-top: 0.8rem;
     }
-    .category-card:hover::after { transform: scaleX(1); }
-
-    /* ── MODAL ── */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 200;
+    .product-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--brown);
+    }
+    .product-price span { font-size: 0.75rem; font-weight: 400; }
+    .product-arrow {
+      width: 32px; height: 32px;
+      background: var(--brown);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
+      color: #fff;
+      font-size: 0.9rem;
+      transition: background 0.3s;
     }
-    .modal-backdrop.open {
-      opacity: 1;
-      pointer-events: all;
+    .product-card:hover .product-arrow { background: var(--red); }
+
+    .collection-cta-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    .modal-box {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      max-width: 900px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
+    /* ── LIFESTYLE ── */
+    .lifestyle {
       position: relative;
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-    }
-    .modal-backdrop.open .modal-box { transform: none; }
-
-    .modal-header {
+      min-height: 480px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 1.5rem;
-      border-bottom: 1px solid var(--border);
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      /* ↓ バイク背景写真をここに設定 */
+      background: linear-gradient(135deg, #1a0e04 0%, #2d1a08 100%);
+      overflow: hidden;
     }
-    .modal-title-en {
+    .lifestyle-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15,8,2,0.65);
+    }
+    .lifestyle-content { position: relative; z-index: 1; }
+    .lifestyle-label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.5em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .lifestyle-title .line1 {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .lifestyle-title .line2 {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+    .lifestyle-divider {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      margin: 1.5rem auto;
+    }
+    .lifestyle-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 380px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    /* ── BADGES ── */
+    .badges {
+      background: var(--cream2);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .badges-inner { max-width: 800px; margin: 0 auto; }
+    .badges-images {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .badge-img {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 20px rgba(58,36,16,0.15));
+      background: var(--cream);
+    }
+    .badges-label {
       font-family: 'Oswald', sans-serif;
       font-size: 0.6rem;
       letter-spacing: 0.45em;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-    .modal-title-ja {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-top: 0.1rem;
-    }
-    .modal-close {
-      background: none;
-      border: 1px solid var(--border);
       color: var(--text-muted);
-      font-size: 1.1rem;
-      width: 36px; height: 36px;
-      cursor: pointer;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .badges-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .badges-title .dark { color: var(--brown); }
+    .badges-title .red  { color: var(--red); font-style: italic; }
+    .badges-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .checkered {
+      height: 14px;
+      background-image: repeating-linear-gradient(
+        90deg,
+        #fff 0, #fff 14px,
+        var(--dark) 14px, var(--dark) 28px
+      );
+    }
+    .cta-body {
+      position: relative;
+      min-height: 440px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: border-color 0.3s, color 0.3s;
-      flex-shrink: 0;
+      text-align: center;
+      padding: 4rem 2rem;
+      /* ↓ バイク背景写真をここに設定 */
+      background: linear-gradient(135deg, #1a0e04 0%, #2d1a08 50%, #1a0e04 100%);
     }
-    .modal-close:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* Products inside modal */
-    .modal-products {
-      padding: 1.5rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .modal-product-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: border-color 0.3s, transform 0.3s;
-      position: relative;
-    }
-    .modal-product-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
-    .modal-product-card::before {
-      content: '';
+    .cta-overlay {
       position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform 0.3s;
+      inset: 0;
+      background: rgba(10,5,0,0.72);
     }
-    .modal-product-card:hover::before { transform: scaleX(1); }
-
-    .modal-product-img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-      background: var(--bg2);
-    }
-    .modal-product-info { padding: 1.2rem; }
-    .modal-product-name {
+    .cta-content { position: relative; z-index: 1; }
+    .cta-label {
       font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.3rem;
-    }
-    .modal-product-price {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.1rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.5em;
       color: var(--gold);
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-    }
-    .modal-product-desc {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.8;
+      text-transform: uppercase;
       margin-bottom: 1rem;
     }
-    .modal-product-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+    .cta-title {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .cta-title .white { color: #fff; display: block; }
+    .cta-title .gold  { color: var(--gold); font-style: italic; display: block; }
+    .cta-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+      line-height: 2;
+    }
+    .cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline-light {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.25em;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.4);
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      transition: border-color 0.3s;
     }
-    .modal-product-card:hover .modal-product-cta { gap: 0.8rem; }
-    .modal-product-cta::after { content: '→'; transition: transform 0.3s; }
-
-    /* ── CTA BAND ── */
-    .cta-band {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-band::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 900px; height: 500px;
-      background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .cta-inner { position: relative; z-index: 1; }
-    .cta-inner .section-title { margin: 0.6rem 0 1rem; }
-    .cta-inner p { font-size: 0.88rem; color: var(--text-muted); max-width: 380px; margin: 0 auto 2.5rem; }
-    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-outline-light:hover { border-color: #fff; }
 
     /* ── FOOTER ── */
-    footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; }
+    footer {
+      background: var(--cream);
+      border-top: 1px solid var(--cream3);
+      padding: 1.5rem 2rem;
+    }
     .footer-inner {
       max-width: 1080px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 1rem;
     }
-    .footer-logo { font-family: 'Oswald', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.35em; color: var(--gold); }
-    .footer-copy { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer-badge {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: var(--cream2);
+    }
+    .footer-brand { line-height: 1.3; }
+    .footer-brand-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--brown);
+      text-transform: uppercase;
+    }
+    .footer-copy {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+    .footer-center {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .footer-center a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+    }
     .footer-link {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.72rem;
+      font-weight: 500;
       letter-spacing: 0.2em;
+      text-transform: uppercase;
       color: var(--text-muted);
       text-decoration: none;
-      text-transform: uppercase;
       transition: color 0.3s;
     }
-    .footer-link:hover { color: var(--gold); }
+    .footer-link:hover { color: var(--red); }
 
     /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .fade-in.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      header { padding: 1rem 1.2rem; }
-      .nav-links { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .category-grid { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; text-align: center; }
-      .cta-btns { flex-direction: column; align-items: center; }
+      .philosophy-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .philosophy-photos { margin-bottom: 3rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .feature-item { border-right: none; }
+      .feature-item:nth-child(3) { border-bottom: 1px solid var(--cream3); }
+      .collection-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
     }
-    @media (max-width: 480px) {
-      .modal-products { grid-template-columns: 1fr; }
+    @media (max-width: 520px) {
+      .collection-grid { grid-template-columns: 1fr; }
+      .badges-images { gap: 2rem; }
+      .badge-img { width: 150px; height: 150px; }
     }
   </style>
 </head>
@@ -554,266 +858,418 @@
 
 <!-- ══ HEADER ══ -->
 <header>
-  <a href="#" class="logo">Cafe<span> Racer</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#products">Products</a></li>
-  </ul>
+  <a href="#" class="header-logo">
+    <img class="header-badge"
+         src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+         alt="Cafe Racer Badge">
+    <span class="header-name">Cafe Racer</span>
+  </a>
   <a href="https://suzuri.jp/bandai_nameko/products"
-     class="header-cta"
+     class="header-shop"
      onclick="trackClick('header-shop')"
      target="_blank" rel="noopener">Shop</a>
 </header>
 
 
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Handcrafted for those who ride</p>
-    <h1 class="hero-title">
-      Cafe
-      <span class="italic-line">Racer</span>
-      Goods
-    </h1>
-    <div class="hero-divider"></div>
-    <p class="hero-subtitle">
-      速さと美学を追い求める者たちへ。<br>
-      カフェレーサーのスピリットを纏ったプロダクト。
-    </p>
-    <a href="#products" class="btn-primary">
-      <span class="shine"></span>
-      コレクションを見る
-    </a>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-
-<!-- ══ ABOUT ══ -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="fade-in">
-        <p class="section-label">Philosophy</p>
-        <h2 class="section-title">走る者の<br>美学と哲学</h2>
-        <div class="about-body">
-          <p>カフェレーサーとは、ただのオートバイではない。余分をすべて削ぎ落とし、速さと機能美のみを残した、ひとつの思想だ。</p>
-          <p>1950年代のロンドン、若者たちはカフェからカフェへ、誰よりも速く走ることを誓った。その精神は今も生きている。</p>
-          <p>このグッズコレクションは、そのスピリットをプロダクトとして昇華させたもの。ライダーでなくとも、その美学に共鳴する全ての人へ。</p>
-        </div>
-      </div>
-      <div class="about-stats fade-in">
-        <div class="stat"><div class="stat-num">1950s</div><div class="stat-label">Born in London</div></div>
-        <div class="stat"><div class="stat-num">100+</div><div class="stat-label">MPH Spirit</div></div>
-        <div class="stat"><div class="stat-num">0</div><div class="stat-label">Compromise</div></div>
-        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Road Ahead</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ PRODUCTS ══ -->
-<section id="products">
-  <div class="container">
-    <div class="products-intro">
-      <div>
-        <p class="section-label fade-in">Collection</p>
-        <h2 class="section-title fade-in">カテゴリを<br>選んでください</h2>
-      </div>
-      <a href="https://suzuri.jp/bandai_nameko/products"
-         class="btn-outline fade-in"
-         onclick="trackClick('all-products')"
-         target="_blank" rel="noopener">全商品を見る</a>
-    </div>
-
-    <div class="category-grid">
-
-      <!-- ステッカー -->
-      <div class="category-card fade-in" onclick="openCategory('sticker')" role="button" tabindex="0" aria-label="ステッカーを見る">
-        <img src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
-             alt="Cafe Racer ステッカー" loading="lazy">
-        <div class="category-overlay"></div>
-        <div class="category-info">
-          <p class="category-en">Sticker</p>
-          <h3 class="category-ja">ステッカー</h3>
-          <p class="category-hint">タップして商品を見る →</p>
-        </div>
-      </div>
-
-      <!-- マグカップ -->
-      <div class="category-card fade-in" onclick="openCategory('mug')" role="button" tabindex="0" aria-label="マグカップを見る">
-        <img src="https://lens.suzuri.jp/1024x1024/mug/m/white/hold/1/1395816591-4000x4000.png.webp?h=47de4a9e3c7c98d04511e27276d34a640dbe0a47&printed=true"
-             alt="Cafe Racer マグカップ" loading="lazy">
-        <div class="category-overlay"></div>
-        <div class="category-info">
-          <p class="category-en">Mug</p>
-          <h3 class="category-ja">マグカップ</h3>
-          <p class="category-hint">タップして商品を見る →</p>
-        </div>
-      </div>
-
-      <!-- キーホルダー -->
-      <div class="category-card fade-in" onclick="openCategory('keychain')" role="button" tabindex="0" aria-label="キーホルダーを見る">
-        <img src="https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/front/19844248/1777524980-587x587.png.webp"
-             alt="Cafe Racer アクリルキーホルダー" loading="lazy">
-        <div class="category-overlay"></div>
-        <div class="category-info">
-          <p class="category-en">Key Holder</p>
-          <h3 class="category-ja">キーホルダー</h3>
-          <p class="category-hint">タップして商品を見る →</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ MODAL ══ -->
-<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" onclick="closeOnBackdrop(event)">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <p class="modal-title-en" id="modal-en"></p>
-        <p class="modal-title-ja" id="modal-ja"></p>
-      </div>
-      <button class="modal-close" onclick="closeModal()" aria-label="閉じる">✕</button>
-    </div>
-    <div class="modal-products" id="modal-products"></div>
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <!-- 2セット連結でループ -->
+    <span class="ticker-item">Cafe Racer Goods<span class="diamond">◆</span>Coffee &amp; Bikes<span class="diamond">◆</span>Cappucchino Racer<span class="diamond">◆</span></span>
+    <span class="ticker-item">Cafe Racer Goods<span class="diamond">◆</span>Coffee &amp; Bikes<span class="diamond">◆</span>Cappucchino Racer<span class="diamond">◆</span></span>
+    <span class="ticker-item">Cafe Racer Goods<span class="diamond">◆</span>Coffee &amp; Bikes<span class="diamond">◆</span>Cappucchino Racer<span class="diamond">◆</span></span>
+    <span class="ticker-item">Cafe Racer Goods<span class="diamond">◆</span>Coffee &amp; Bikes<span class="diamond">◆</span>Cappucchino Racer<span class="diamond">◆</span></span>
   </div>
 </div>
 
 
-<!-- ══ CTA ══ -->
-<section class="cta-band">
-  <div class="container">
-    <div class="cta-inner">
-      <p class="section-label">Suzuri Store</p>
-      <h2 class="section-title">全アイテムは<br>Suzuriで</h2>
-      <p>コレクション全品を公式ストアでご覧いただけます。</p>
-      <div class="cta-btns">
-        <a href="https://suzuri.jp/bandai_nameko/products"
-           class="btn-primary"
-           onclick="trackClick('cta-primary')"
-           target="_blank" rel="noopener">
-          <span class="shine"></span>ストアへ進む
-        </a>
-        <a href="https://suzuri.jp/bandai_nameko/products"
-           class="btn-outline"
-           onclick="trackClick('cta-outline')"
-           target="_blank" rel="noopener">全商品を見る</a>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <div class="hero-eyebrow-line"></div>
+    <span class="hero-eyebrow-text">Coffee &amp; Bikes</span>
+    <div class="hero-eyebrow-line"></div>
+  </div>
+
+  <img class="hero-badge"
+       src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+       alt="Cafe Racer Badge Logo">
+
+  <h1 class="hero-title">
+    <span class="line1">Cafe</span>
+    <span class="line2">Racer</span>
+  </h1>
+
+  <div class="hero-divider"></div>
+
+  <p class="hero-subtitle">
+    コーヒーとバイクを愛するすべての人へお届けします。<br>
+    カフェレーサースピリットを纏ったオリジナルグッズコレクションです。
+  </p>
+
+  <div class="hero-btns">
+    <a href="#collection"
+       class="btn-red"
+       onclick="trackClick('hero-collection')">コレクションを見る</a>
+    <a href="https://suzuri.jp/bandai_nameko/products"
+       class="btn-outline-dark"
+       onclick="trackClick('hero-suzuri')"
+       target="_blank" rel="noopener">Suzuri Store</a>
+  </div>
+
+  <div class="hero-bottom-line"></div>
+</section>
+
+
+<!-- ══ PHILOSOPHY ══ -->
+<section class="philosophy" id="about">
+  <div class="philosophy-inner">
+
+    <div class="philosophy-photos fade-in">
+      <!-- バイクの写真があればここに <img> タグを追加 -->
+      <div class="philosophy-photo-main"></div>
+      <div class="philosophy-photo-sub"></div>
+      <img class="philosophy-badge-overlay"
+           src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+           alt="Badge">
+    </div>
+
+    <div class="philosophy-text fade-in">
+      <p class="philosophy-label">Our Philosophy</p>
+      <h2 class="philosophy-title">cafe racerの歴史</h2>
+      <div class="philosophy-body">
+        <p>カフェレーサーは、1950年代のイギリスで生まれたオートバイのスタイルです。当時の若者たちは、ロンドン郊外のカフェを拠点に、不要なパーツを取り除いた軽量化されたバイクで公道を走り回っていました。</p>
+        <p>目標は1マイルを1分以内、つまり時速100マイル（約160km）で走ることです。この挑戦者たちは「トン・アップ・ボーイズ」と呼ばれました。そのスタイルと精神は、今もバイク好きたちに受け継がれています。</p>
+      </div>
+      <div class="philosophy-quote">
+        <p>「速く走るためだけに、すべてを削ぎ<br>落とす。それがカフェレーサーの美学<br>です。」</p>
+        <p class="philosophy-quote-attr">— The Spirit of the Ton-Up Club</p>
+      </div>
+      <div class="philosophy-stats">
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">1950s</div>
+          <div class="philosophy-stat-label">Born in London</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">100+</div>
+          <div class="philosophy-stat-label">MPH Spirit</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">0</div>
+          <div class="philosophy-stat-label">Compromise</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">∞</div>
+          <div class="philosophy-stat-label">Road Ahead</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ FEATURES ══ -->
+<section class="features">
+  <div class="features-grid">
+    <div class="feature-item fade-in">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      <div class="feature-content">
+        <p class="feature-title">On-Demand</p>
+        <p class="feature-desc">注文生産ですので、在庫ゼロ・廃棄ゼロです。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      </div>
+      <div class="feature-content">
+        <p class="feature-title">Fast Delivery</p>
+        <p class="feature-desc">GMOペパボが迅速に発送いたします。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l5 2.18V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.18L12 5z"/></svg>
+      </div>
+      <div class="feature-content">
+        <p class="feature-title">Secure Payment</p>
+        <p class="feature-desc">SUZURI安全決済システムをご利用いただけます。</p>
+      </div>
+    </div>
+    <div class="feature-item fade-in">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="feature-content">
+        <p class="feature-title">Original Design</p>
+        <p class="feature-desc">2種のバッジロゴで本物の美学をお届けします。</p>
       </div>
     </div>
   </div>
+</section>
+
+
+<!-- ══ COLLECTION ══ -->
+<section class="collection" id="collection">
+  <div class="collection-header fade-in">
+    <div>
+      <p class="collection-label">Collection</p>
+      <h2 class="collection-title">
+        <span class="dark-line">フィーチャード</span>
+        <span class="red-line">コレクション</span>
+      </h2>
+    </div>
+    <a href="https://suzuri.jp/bandai_nameko/products"
+       class="collection-all-link"
+       onclick="trackClick('collection-all')"
+       target="_blank" rel="noopener">全商品を見る →</a>
+  </div>
+
+  <div class="collection-tabs">
+    <button class="tab-btn active" data-tab="all" onclick="filterProducts('all')">All</button>
+    <button class="tab-btn" data-tab="accessories" onclick="filterProducts('accessories')">Accessories</button>
+    <button class="tab-btn" data-tab="everyday" onclick="filterProducts('everyday')">Everyday</button>
+  </div>
+
+  <div class="collection-grid">
+
+    <a href="https://suzuri.jp/bandai_nameko/19844248/sticker/m/white"
+       class="product-card"
+       data-category="accessories"
+       onclick="trackClick('product-sticker')"
+       target="_blank" rel="noopener">
+      <span class="product-badge">Popular</span>
+      <div class="product-img-wrap">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+             alt="CAFE RACER ステッカー" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="product-type">Sticker</p>
+        <h3 class="product-name">CAFE RACER ステッカー</h3>
+        <p class="product-desc">防水仕様の高品質ステッカーです。バイクのタンク・ヘルメット・PCにご使用いただけます。</p>
+        <div class="product-footer">
+          <div class="product-price">¥440 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://suzuri.jp/bandai_nameko/19844291/mug/m/red"
+       class="product-card"
+       data-category="everyday"
+       onclick="trackClick('product-mug-red')"
+       target="_blank" rel="noopener">
+      <span class="product-badge">Popular</span>
+      <div class="product-img-wrap">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/mug/m/white/front/19844291/1777525296-652x670.png.1.5521+0.0+0.0.webp?h=24ffca8570e897db9284db38965105f1b44e512b&printed=true"
+             alt="マグカップ" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="product-type">Mug</p>
+        <h3 class="product-name">マグカップ（赤）</h3>
+        <p class="product-desc">大容量プリントマグカップです。朝のコーヒーをカフェレーサースピリットとともにお楽しみください。</p>
+        <div class="product-footer">
+          <div class="product-price">¥2,420 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://suzuri.jp/bandai_nameko/19844291/mug/m/navy"
+       class="product-card"
+       data-category="everyday"
+       onclick="trackClick('product-mug-navy')"
+       target="_blank" rel="noopener">
+      <div class="product-img-wrap">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/mug/m/white/front/19844291/1777525296-652x670.png.1.5521+0.0+0.0.webp?h=24ffca8570e897db9284db38965105f1b44e512b&printed=true"
+             alt="マグカップ ネイビー" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="product-type">Mug</p>
+        <h3 class="product-name">マグカップ（ネイビー）</h3>
+        <p class="product-desc">落ち着いたネイビーバッジデザインです。電子レンジ・食洗機にも対応しています。</p>
+        <div class="product-footer">
+          <div class="product-price">¥2,420 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://suzuri.jp/bandai_nameko/products"
+       class="product-card"
+       data-category="everyday"
+       onclick="trackClick('product-tumbler')"
+       target="_blank" rel="noopener">
+      <span class="product-badge new">New</span>
+      <div class="product-img-wrap" style="background:#1a1208;">
+        <!-- タンブラー画像 -->
+      </div>
+      <div class="product-info">
+        <p class="product-type">Tumbler</p>
+        <h3 class="product-name">サーモタンブラー</h3>
+        <p class="product-desc">真空断熱ステンレス製・マットブラックのタンブラーです。ロングライドのお供にどうぞ。</p>
+        <div class="product-footer">
+          <div class="product-price">¥3,740 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://suzuri.jp/bandai_nameko/19844248/acrylic-keychain/50x50mm/clear"
+       class="product-card"
+       data-category="accessories"
+       onclick="trackClick('product-keychain-navy')"
+       target="_blank" rel="noopener">
+      <div class="product-img-wrap">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/phone-hang/19844248/1777524980-587x587.png.webp"
+             alt="キーホルダー" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="product-type">Key Holder</p>
+        <h3 class="product-name">キーホルダー（ネイビー）</h3>
+        <p class="product-desc">クリアアクリル製です。バイクのキーやバッグに添えるカフェレーサーバッジとしてお使いいただけます。</p>
+        <div class="product-footer">
+          <div class="product-price">¥748 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://suzuri.jp/bandai_nameko/19844248/acrylic-keychain/50x50mm/clear"
+       class="product-card"
+       data-category="accessories"
+       onclick="trackClick('product-keychain-red')"
+       target="_blank" rel="noopener">
+      <div class="product-img-wrap">
+        <img src="https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/phone-hang/19844248/1777524980-587x587.png.webp"
+             alt="キーホルダー レッド" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="product-type">Key Holder</p>
+        <h3 class="product-name">キーホルダー（レッド）</h3>
+        <p class="product-desc">クリアアクリル製・赤ロゴデザインです。存在感のあるカフェレーサーバッジをお楽しみください。</p>
+        <div class="product-footer">
+          <div class="product-price">¥748 <span>〜</span></div>
+          <div class="product-arrow">›</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="collection-cta-wrap fade-in">
+    <a href="https://suzuri.jp/bandai_nameko/products"
+       class="btn-red"
+       onclick="trackClick('collection-suzuri')"
+       target="_blank" rel="noopener">SUZURIで全商品を見る</a>
+  </div>
+</section>
+
+
+<!-- ══ LIFESTYLE ══ -->
+<section class="lifestyle">
+  <div class="lifestyle-overlay"></div>
+  <div class="lifestyle-content fade-in">
+    <p class="lifestyle-label">The Lifestyle</p>
+    <h2 class="lifestyle-title">
+      <span class="line1">ライドと</span>
+      <span class="line2">コーヒーと美学</span>
+    </h2>
+    <div class="lifestyle-divider"></div>
+    <p class="lifestyle-text">
+      夜明け前のガレージ、革ジャケットの匂い、エンジンの咆哮。<br>
+      カフェレーサーは単なる乗り物ではありません。それはライフスタイルです。
+    </p>
+  </div>
+</section>
+
+
+<!-- ══ BADGES ══ -->
+<section class="badges">
+  <div class="badges-inner fade-in">
+    <div class="badges-images">
+      <img class="badge-img"
+           src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+           alt="Red Badge">
+      <!-- ネイビーバッジ画像 (2枚目のバッジ画像URLをここに設定) -->
+      <img class="badge-img"
+           src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+           alt="Navy Badge"
+           style="filter: hue-rotate(200deg) saturate(0.8) drop-shadow(0 4px 20px rgba(58,36,16,0.15));">
+    </div>
+    <p class="badges-label">Two Badges. One Spirit.</p>
+    <h2 class="badges-title">
+      <span class="dark">2つのロゴが</span>
+      <span class="red">宿す魂</span>
+    </h2>
+    <p class="badges-desc">赤と黒の力強さ、ネイビーとクリームの気品。それぞれ異なる表情を持つ2種のバッジが、カフェレーサーのスピリットを体現しています。どちらもあなたのライドスタイルを表す、本物のシンボルです。</p>
+  </div>
+</section>
+
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <div class="checkered"></div>
+  <div class="cta-body">
+    <div class="cta-overlay"></div>
+    <div class="cta-content fade-in">
+      <p class="cta-label">Get Yours Now</p>
+      <h2 class="cta-title">
+        <span class="white">コレクションを</span>
+        <span class="gold">手に入れろ</span>
+      </h2>
+      <p class="cta-desc">SUZURIの公式ストアで、カフェレーサースピリットを纏ったグッズをお求めいただけます。全商品、注文生産でお届けしています。</p>
+      <div class="cta-btns">
+        <a href="https://suzuri.jp/bandai_nameko/products"
+           class="btn-red"
+           onclick="trackClick('cta-store')"
+           target="_blank" rel="noopener">ストアへ進む</a>
+        <a href="#collection"
+           class="btn-outline-light"
+           onclick="trackClick('cta-collection')">コレクションを見る</a>
+      </div>
+    </div>
+  </div>
+  <div class="checkered"></div>
 </section>
 
 
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">Cafe Racer</div>
-    <p class="footer-copy">© 2026 Cafe Racer Goods. Powered by Suzuri.</p>
+    <div class="footer-left">
+      <img class="footer-badge"
+           src="https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true"
+           alt="Badge">
+      <div class="footer-brand">
+        <p class="footer-brand-name">Cafe Racer Goods</p>
+        <p class="footer-copy">© 2026 cappucchino racer</p>
+      </div>
+    </div>
+    <p class="footer-center">Powered by <a href="https://suzuri.jp/bandai_nameko/products" target="_blank" rel="noopener">Suzuri by GMO</a></p>
     <a href="https://suzuri.jp/bandai_nameko/products"
        class="footer-link"
-       onclick="trackClick('footer-link')"
-       target="_blank" rel="noopener">Suzuri Store →</a>
+       onclick="trackClick('footer-store')"
+       target="_blank" rel="noopener">Store →</a>
   </div>
 </footer>
 
 
 <script>
-  // ── 商品データ ──────────────────────────────────────────
-  // 商品を追加する場合は products 配列に追加するだけでOK
-  const CATEGORIES = {
-    sticker: {
-      en: 'Sticker',
-      ja: 'ステッカー',
-      products: [
-        {
-          name: 'cafe racer ステッカー',
-          price: '¥512',
-          desc: 'ヘルメット、タンク、ラップトップに。カフェレーサーの魂を刻む、こだわりのステッカー。',
-          image: 'https://lens.suzuri.jp/v3/1024x1024/sticker/m/white/front/19844248/1777524980-587x587.png.0.9373+0.0+0.0.webp?h=7aaa68b296b42bb34b2f6deeebdbe74856dcf9d8&printed=true',
-          url: 'https://suzuri.jp/bandai_nameko/19844248/sticker/m/white'
-        }
-      ]
-    },
-    mug: {
-      en: 'Mug',
-      ja: 'マグカップ',
-      products: [
-        {
-          name: 'cafe racer マグカップ',
-          price: '¥2,024',
-          desc: '走り出す前の一杯を、このマグカップで。ガレージでも、デスクでも。朝の儀式に。',
-          image: 'https://lens.suzuri.jp/1024x1024/mug/m/white/hold/1/1395816591-4000x4000.png.webp?h=47de4a9e3c7c98d04511e27276d34a640dbe0a47&printed=true',
-          url: 'https://suzuri.jp/bandai_nameko/19844291/mug/m/white'
-        }
-      ]
-    },
-    keychain: {
-      en: 'Key Holder',
-      ja: 'アクリルキーホルダー',
-      products: [
-        {
-          name: 'cafe racer アクリルキーホルダー',
-          price: '¥1,109〜',
-          desc: '毎日手にするものだから、質にこだわる。ガレージでも存在感を放つアクリルキーホルダー。',
-          image: 'https://lens.suzuri.jp/v3/1024x1024/acrylic-keychain/50x50mm/clear/front/19844248/1777524980-587x587.png.webp',
-          url: 'https://suzuri.jp/bandai_nameko/19844248/acrylic-keychain/50x50mm/clear'
-        }
-      ]
-    }
-  };
-
-  // ── モーダル開閉 ──────────────────────────────────────
-  function openCategory(key) {
-    const cat = CATEGORIES[key];
-    document.getElementById('modal-en').textContent = cat.en;
-    document.getElementById('modal-ja').textContent = cat.ja;
-
-    const container = document.getElementById('modal-products');
-    container.innerHTML = cat.products.map(p => `
-      <a href="${p.url}" class="modal-product-card"
-         onclick="trackClick('modal-${key}')"
-         target="_blank" rel="noopener">
-        <img class="modal-product-img" src="${p.image}" alt="${p.name}" loading="lazy">
-        <div class="modal-product-info">
-          <p class="modal-product-name">${p.name}</p>
-          <p class="modal-product-price">${p.price}</p>
-          <p class="modal-product-desc">${p.desc}</p>
-          <span class="modal-product-cta">Suzuriで購入</span>
-        </div>
-      </a>
-    `).join('');
-
-    document.getElementById('modal').classList.add('open');
-    document.body.style.overflow = 'hidden';
+  // ── フィルタータブ ──────────────────────────────
+  function filterProducts(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+    document.querySelectorAll('.product-card').forEach(card => {
+      const show = tab === 'all' || card.dataset.category === tab;
+      card.style.display = show ? 'flex' : 'none';
+    });
   }
 
-  function closeModal() {
-    document.getElementById('modal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function closeOnBackdrop(e) {
-    if (e.target === document.getElementById('modal')) closeModal();
-  }
-
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-  // キーボード操作対応
-  document.querySelectorAll('.category-card').forEach(card => {
-    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') card.click(); });
-  });
-
-  // ── GA4 クリックトラッキング ──────────────────────────
+  // ── GA4 クリックトラッキング ──────────────────
   function trackClick(label) {
     if (typeof gtag === 'undefined') return;
     gtag('event', 'outbound_click', {
@@ -823,10 +1279,10 @@
     });
   }
 
-  // ── フェードイン ──────────────────────────────────────
+  // ── フェードイン ──────────────────────────────
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 </script>
 
